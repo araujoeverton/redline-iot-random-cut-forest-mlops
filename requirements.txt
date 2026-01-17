@@ -1,0 +1,17 @@
+# AWS IoT SDK for Python
+awsiotsdk>=1.27.0
+
+# AWS SDK for Python (CloudWatch metrics)
+boto3>=1.34.0
+
+# Structured logging
+structlog>=24.1.0
+
+# Configuration management
+PyYAML>=6.0.1
+
+# Scientific computing (for physics models)
+numpy>=1.26.0
+
+# Async support
+aiofiles>=23.2.1
