@@ -1,0 +1,22 @@
+# Redline IoT Telemetry Simulator Configuration
+
+vehicle:
+  vehicle_id: "GT3-RACER-01"
+  session_duration_sec: 3600  # 1 hour
+  sample_rate_hz: 10  # 10 samples per second
+
+iot:
+  endpoint: "a22e3wjxjuf3bu-ats.iot.us-east-1.amazonaws.com"  # From: terraform output iot_endpoint
+  topic: "car/GT3-RACER-01/telemetry"
+  cert_path: "./certs/GT3-RACER-01.cert.pem"
+  private_key_path: "./certs/GT3-RACER-01.private.key"
+  ca_path: "./certs/AmazonRootCA1.pem"
+  thing_name: "GT3-RACER-01"
+
+brake:
+  fade_coefficient: 0.002
+  cooling_rate: 0.05
+
+engine:
+  max_rpm: 9000
+  idle_rpm: 800
