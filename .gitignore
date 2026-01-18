@@ -65,9 +65,7 @@ simulator/certs/*.crt
 *.local.yml
 *.local.yaml
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
+
 
 # AWS
 .aws/
