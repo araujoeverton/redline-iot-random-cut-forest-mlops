@@ -83,3 +83,15 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "sagemaker_default_instance_type" {
+  description = "Default instance type for SageMaker Studio apps"
+  type        = string
+  default     = "ml.t3.medium"
+}
+
+variable "sagemaker_user_profile_name" {
+  description = "Name for the default SageMaker Studio user profile"
+  type        = string
+  default     = "data-scientist"
+}

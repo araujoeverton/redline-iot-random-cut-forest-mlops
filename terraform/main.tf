@@ -115,6 +115,25 @@ module "iot_core" {
 }
 
 # ============================================================================
+# Module: SageMaker Studio Domain
+# ============================================================================
+
+module "sagemaker" {
+  source = "./modules/sagemaker"
+
+  environment                    = var.environment
+  project_name                   = var.project_name
+  s3_bucket_name                 = module.s3.bucket_name
+  sagemaker_execution_role_arn   = module.iam.sagemaker_execution_role_arn
+  default_instance_type          = var.sagemaker_default_instance_type
+  user_profile_name              = var.sagemaker_user_profile_name
+
+  tags = local.common_tags
+
+  depends_on = [module.s3, module.iam]
+}
+
+# ============================================================================
 # Module: CloudWatch Observability (Commented until module is created)
 # ============================================================================
 

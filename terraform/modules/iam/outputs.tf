@@ -27,3 +27,13 @@ output "glue_crawler_role_name" {
   description = "Name of IAM role for Glue Crawler"
   value       = aws_iam_role.glue_crawler.name
 }
+
+output "sagemaker_execution_role_arn" {
+  description = "ARN of IAM role for SageMaker execution"
+  value       = aws_iam_role.sagemaker_execution.arn
+}
+
+output "sagemaker_execution_role_name" {
+  description = "Name of IAM role for SageMaker execution"
+  value       = aws_iam_role.sagemaker_execution.name
+}

@@ -76,3 +76,32 @@ output "iot_thing_names" {
   description = "Names of IoT Things created"
   value       = module.iot_core.thing_names
 }
+
+# ============================================================================
+# SageMaker Studio Outputs
+# ============================================================================
+
+output "sagemaker_domain_id" {
+  description = "SageMaker Studio Domain ID"
+  value       = module.sagemaker.domain_id
+}
+
+output "sagemaker_domain_arn" {
+  description = "SageMaker Studio Domain ARN"
+  value       = module.sagemaker.domain_arn
+}
+
+output "sagemaker_domain_url" {
+  description = "SageMaker Studio Domain URL"
+  value       = module.sagemaker.domain_url
+}
+
+output "sagemaker_user_profile_name" {
+  description = "SageMaker Studio User Profile Name"
+  value       = module.sagemaker.user_profile_name
+}
+
+output "sagemaker_execution_role_arn" {
+  description = "ARN of IAM role for SageMaker execution"
+  value       = module.iam.sagemaker_execution_role_arn
+}
